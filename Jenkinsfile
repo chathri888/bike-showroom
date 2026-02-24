@@ -4,8 +4,6 @@ pipeline {
     environment {
         IMAGE_NAME  = 'bike-showroom'
         IMAGE_TAG   = 'latest'
-        MINIKUBE    = 'sudo minikube'
-        KUBECTL     = 'sudo kubectl'
     }
 
     triggers {
@@ -25,11 +23,12 @@ pipeline {
             steps {
                 echo '🚀 Ensuring Minikube is running...'
                 sh '''
-                    if sudo minikube status | grep -q "Running"; then
+                    if sudo minikube status 2>/dev/null | grep -q "Running"; then
                         echo "✅ Minikube is already running"
                     else
                         echo "Starting Minikube..."
                         sudo minikube start --driver=none
+                        sleep 10
                     fi
                     sudo minikube status
                 '''
@@ -39,12 +38,11 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 echo '🐳 Building Docker image...'
-                sh '''#!/bin/bash
-                    eval $(sudo minikube docker-env)
+                sh """
                     sudo docker build -t ${IMAGE_NAME}:${IMAGE_TAG} .
-                    echo "✅ Image built successfully"
+                    echo '✅ Image built successfully'
                     sudo docker images | grep ${IMAGE_NAME}
-                '''
+                """
             }
         }
 
@@ -54,6 +52,7 @@ pipeline {
                 sh '''
                     sudo kubectl apply -f k8s/deployment.yaml
                     sudo kubectl apply -f k8s/service.yaml
+                    sleep 5
                     sudo kubectl rollout restart deployment/bike-showroom
                     sudo kubectl rollout status deployment/bike-showroom --timeout=120s
                 '''
@@ -64,14 +63,16 @@ pipeline {
             steps {
                 echo '✅ Verifying deployment...'
                 sh '''
-                    echo "--- Pods ---"
-                    sudo kubectl get pods -l app=bike-showroom
+                    echo "========== Pods =========="
+                    sudo kubectl get pods -l app=bike-showroom -o wide
                     echo ""
-                    echo "--- Service ---"
+                    echo "========== Service =========="
                     sudo kubectl get svc bike-showroom-service
                     echo ""
-                    echo "--- Access URL ---"
-                    sudo minikube service bike-showroom-service --url
+                    echo "========== Access URL =========="
+                    NODE_IP=$(sudo kubectl get nodes -o jsonpath='{.items[0].status.addresses[?(@.type=="InternalIP")].address}')
+                    NODE_PORT=$(sudo kubectl get svc bike-showroom-service -o jsonpath='{.spec.ports[0].nodePort}')
+                    echo "🌐 App is live at: http://${NODE_IP}:${NODE_PORT}"
                 '''
             }
         }
@@ -79,7 +80,7 @@ pipeline {
 
     post {
         success {
-            echo '🎉 Bike Showroom deployed successfully!'
+            echo '🎉 Bike Showroom deployed successfully on Minikube!'
         }
         failure {
             echo '❌ Pipeline failed. Check the logs above.'
