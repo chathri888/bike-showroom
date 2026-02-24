@@ -4,6 +4,12 @@ pipeline {
     environment {
         IMAGE_NAME  = 'bike-showroom'
         IMAGE_TAG   = 'latest'
+        MINIKUBE    = 'sudo minikube'
+        KUBECTL     = 'sudo kubectl'
+    }
+
+    triggers {
+        pollSCM('* * * * *')
     }
 
     stages {
@@ -19,13 +25,13 @@ pipeline {
             steps {
                 echo '🚀 Ensuring Minikube is running...'
                 sh '''
-                    if minikube status | grep -q "Running"; then
+                    if sudo minikube status | grep -q "Running"; then
                         echo "✅ Minikube is already running"
                     else
                         echo "Starting Minikube..."
                         sudo minikube start --driver=none
                     fi
-                    minikube status
+                    sudo minikube status
                 '''
             }
         }
@@ -34,10 +40,10 @@ pipeline {
             steps {
                 echo '🐳 Building Docker image...'
                 sh '''#!/bin/bash
-                    eval $(minikube docker-env)
-                    docker build -t ${IMAGE_NAME}:${IMAGE_TAG} .
+                    eval $(sudo minikube docker-env)
+                    sudo docker build -t ${IMAGE_NAME}:${IMAGE_TAG} .
                     echo "✅ Image built successfully"
-                    docker images | grep ${IMAGE_NAME}
+                    sudo docker images | grep ${IMAGE_NAME}
                 '''
             }
         }
@@ -46,10 +52,10 @@ pipeline {
             steps {
                 echo '🚀 Deploying to Minikube...'
                 sh '''
-                    kubectl apply -f k8s/deployment.yaml
-                    kubectl apply -f k8s/service.yaml
-                    kubectl rollout restart deployment/bike-showroom
-                    kubectl rollout status deployment/bike-showroom --timeout=120s
+                    sudo kubectl apply -f k8s/deployment.yaml
+                    sudo kubectl apply -f k8s/service.yaml
+                    sudo kubectl rollout restart deployment/bike-showroom
+                    sudo kubectl rollout status deployment/bike-showroom --timeout=120s
                 '''
             }
         }
@@ -59,13 +65,13 @@ pipeline {
                 echo '✅ Verifying deployment...'
                 sh '''
                     echo "--- Pods ---"
-                    kubectl get pods -l app=bike-showroom
+                    sudo kubectl get pods -l app=bike-showroom
                     echo ""
                     echo "--- Service ---"
-                    kubectl get svc bike-showroom-service
+                    sudo kubectl get svc bike-showroom-service
                     echo ""
                     echo "--- Access URL ---"
-                    minikube service bike-showroom-service --url
+                    sudo minikube service bike-showroom-service --url
                 '''
             }
         }
