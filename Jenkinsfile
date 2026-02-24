@@ -19,7 +19,7 @@ pipeline {
             steps {
                 echo '🚀 Ensuring Minikube is running...'
                 sh '''
-                    minikube status || minikube start --driver=docker
+                    minikube status || minikube start --driver=none
                     minikube status
                 '''
             }
