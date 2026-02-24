@@ -50,11 +50,13 @@ pipeline {
             steps {
                 echo '🚀 Deploying to Minikube...'
                 sh '''
+                    sudo kubectl delete deployment bike-showroom --ignore-not-found=true
+                    sudo kubectl delete service bike-showroom-service --ignore-not-found=true
+                    sleep 3
                     sudo kubectl apply -f k8s/deployment.yaml
                     sudo kubectl apply -f k8s/service.yaml
-                    sleep 5
-                    sudo kubectl rollout restart deployment/bike-showroom
-                    sudo kubectl rollout status deployment/bike-showroom --timeout=120s
+                    echo "Waiting for pods to be ready..."
+                    sudo kubectl rollout status deployment/bike-showroom --timeout=180s
                 '''
             }
         }
