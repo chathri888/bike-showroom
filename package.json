@@ -1,0 +1,15 @@
+{
+  "name": "bike-showroom",
+  "version": "1.0.0",
+  "description": "Professional Bike Showroom - Premium motorcycle showcase",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "author": "Bike Showroom",
+  "license": "MIT"
+}

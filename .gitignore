@@ -1,0 +1,4 @@
+node_modules/
+response.html
+*.log
+.env
