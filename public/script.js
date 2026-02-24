@@ -7,7 +7,7 @@ const bikeData = {
     classic350: {
         brand: 'Royal Enfield',
         name: 'Classic 350',
-        image: 'https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=800&q=80',
+        image: 'https://images.unsplash.com/photo-1626439064498-e163a23acfa4?w=800&q=80',
         description: 'The Royal Enfield Classic 350 is a timeless cruiser that combines retro styling with modern engineering. Its thumping 349cc single-cylinder engine delivers smooth power while the classic chrome-laden design turns heads everywhere. Perfect for long highway cruises and city commutes alike.',
         specs: [
             { label: 'Engine', value: '349cc' },
@@ -82,7 +82,7 @@ const bikeData = {
     ns200: {
         brand: 'Bajaj',
         name: 'Pulsar NS200',
-        image: 'https://images.unsplash.com/photo-1622185135505-2d795003994a?w=800&q=80',
+        image: 'https://images.unsplash.com/photo-1614165068253-0eb900949975?w=800&q=80',
         description: 'The Bajaj Pulsar NS200 is a street-naked rocket that punches way above its price. A 199.5cc liquid-cooled engine with triple-spark technology delivers punchy performance. Perimeter frame, mono-shock rear, and aggressive styling make every ride thrilling.',
         specs: [
             { label: 'Engine', value: '199cc' },

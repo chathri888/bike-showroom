@@ -1,438 +1,454 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MotoVault – Premium Bike Showroom</title>
-  <meta name="description" content="MotoVault – Explore premium motorcycles from Royal Enfield, KTM, Yamaha, Kawasaki, Honda & Bajaj. Visit our showroom today." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MotoVault – Premium Bike Showroom</title>
+    <meta name="description"
+        content="MotoVault – Explore premium motorcycles from Royal Enfield, KTM, Yamaha, Kawasaki, Honda & Bajaj. Visit our showroom today." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
-  <!-- ========== NAVBAR ========== -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#" class="nav-logo">
-        <i class="fas fa-motorcycle"></i>
-        <span>Moto<span class="accent">Vault</span></span>
-      </a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home" class="nav-link active">Home</a></li>
-        <li><a href="#bikes" class="nav-link">Bikes</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-        <span class="hamburger"></span>
-      </button>
-    </div>
-  </nav>
-
-  <!-- ========== HERO ========== -->
-  <section class="hero" id="home">
-    <div class="hero-particles" id="heroParticles"></div>
-    <div class="hero-content">
-      <p class="hero-tag">⚡ Premium Motorcycles</p>
-      <h1 class="hero-title">
-        Ride the <span class="gradient-text">Future</span>
-      </h1>
-      <p class="hero-subtitle">
-        Discover our handpicked collection of the finest motorcycles from legendary brands. Performance, style, and engineering excellence – all under one roof.
-      </p>
-      <div class="hero-cta">
-        <a href="#bikes" class="btn btn-primary">
-          <i class="fas fa-eye"></i> Explore Collection
-        </a>
-        <a href="#contact" class="btn btn-outline">
-          <i class="fas fa-calendar-check"></i> Book Test Ride
-        </a>
-      </div>
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <span class="hero-stat-number" data-target="150">0</span>+
-          <span class="hero-stat-label">Bikes in Stock</span>
-        </div>
-        <div class="hero-stat">
-          <span class="hero-stat-number" data-target="12">0</span>+
-          <span class="hero-stat-label">Premium Brands</span>
-        </div>
-        <div class="hero-stat">
-          <span class="hero-stat-number" data-target="5000">0</span>+
-          <span class="hero-stat-label">Happy Riders</span>
-        </div>
-      </div>
-    </div>
-    <div class="hero-scroll">
-      <a href="#bikes"><i class="fas fa-chevron-down"></i></a>
-    </div>
-  </section>
-
-  <!-- ========== FEATURED BIKES ========== -->
-  <section class="section bikes-section" id="bikes">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-tag">Our Collection</p>
-        <h2 class="section-title">Featured <span class="gradient-text">Bikes</span></h2>
-        <p class="section-subtitle">Explore our curated selection of the most sought-after motorcycles</p>
-      </div>
-
-      <!-- Filter Buttons -->
-      <div class="filter-bar">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="cruiser">Cruiser</button>
-        <button class="filter-btn" data-filter="sport">Sport</button>
-        <button class="filter-btn" data-filter="street">Street</button>
-        <button class="filter-btn" data-filter="naked">Naked</button>
-      </div>
-
-      <!-- Bikes Grid -->
-      <div class="bikes-grid" id="bikesGrid">
-
-        <!-- Bike 1 -->
-        <div class="bike-card" data-category="cruiser" data-aos="fade-up">
-          <div class="bike-card-badge">Best Seller</div>
-          <div class="bike-card-image">
-            <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=600&q=80" alt="Royal Enfield Classic 350" loading="lazy" />
-            <div class="bike-card-overlay">
-              <button class="btn-icon" data-bike="classic350"><i class="fas fa-expand"></i></button>
-            </div>
-          </div>
-          <div class="bike-card-body">
-            <div class="bike-card-brand">Royal Enfield</div>
-            <h3 class="bike-card-name">Classic 350</h3>
-            <div class="bike-card-specs">
-              <span><i class="fas fa-tachometer-alt"></i> 20.2 HP</span>
-              <span><i class="fas fa-cog"></i> 349cc</span>
-              <span><i class="fas fa-gas-pump"></i> 35 km/l</span>
-            </div>
-            <div class="bike-card-footer">
-              <div class="bike-price">₹1,99,500</div>
-              <button class="btn btn-sm btn-primary" data-bike="classic350">View Details</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Bike 2 -->
-        <div class="bike-card" data-category="naked" data-aos="fade-up">
-          <div class="bike-card-badge hot">Hot 🔥</div>
-          <div class="bike-card-image">
-            <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=600&q=80" alt="KTM Duke 390" loading="lazy" />
-            <div class="bike-card-overlay">
-              <button class="btn-icon" data-bike="duke390"><i class="fas fa-expand"></i></button>
-            </div>
-          </div>
-          <div class="bike-card-body">
-            <div class="bike-card-brand">KTM</div>
-            <h3 class="bike-card-name">Duke 390</h3>
-            <div class="bike-card-specs">
-              <span><i class="fas fa-tachometer-alt"></i> 43 HP</span>
-              <span><i class="fas fa-cog"></i> 373cc</span>
-              <span><i class="fas fa-gas-pump"></i> 30 km/l</span>
-            </div>
-            <div class="bike-card-footer">
-              <div class="bike-price">₹3,11,000</div>
-              <button class="btn btn-sm btn-primary" data-bike="duke390">View Details</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Bike 3 -->
-        <div class="bike-card" data-category="sport" data-aos="fade-up">
-          <div class="bike-card-badge new">New</div>
-          <div class="bike-card-image">
-            <img src="https://images.unsplash.com/photo-1547549082-6bc09f2049ae?w=600&q=80" alt="Yamaha YZF R15 V4" loading="lazy" />
-            <div class="bike-card-overlay">
-              <button class="btn-icon" data-bike="r15v4"><i class="fas fa-expand"></i></button>
-            </div>
-          </div>
-          <div class="bike-card-body">
-            <div class="bike-card-brand">Yamaha</div>
-            <h3 class="bike-card-name">YZF R15 V4</h3>
-            <div class="bike-card-specs">
-              <span><i class="fas fa-tachometer-alt"></i> 18.4 HP</span>
-              <span><i class="fas fa-cog"></i> 155cc</span>
-              <span><i class="fas fa-gas-pump"></i> 40 km/l</span>
-            </div>
-            <div class="bike-card-footer">
-              <div class="bike-price">₹1,87,000</div>
-              <button class="btn btn-sm btn-primary" data-bike="r15v4">View Details</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Bike 4 -->
-        <div class="bike-card" data-category="sport" data-aos="fade-up">
-          <div class="bike-card-image">
-            <img src="https://images.unsplash.com/photo-1580310614729-ccd69652491d?w=600&q=80" alt="Kawasaki Ninja 300" loading="lazy" />
-            <div class="bike-card-overlay">
-              <button class="btn-icon" data-bike="ninja300"><i class="fas fa-expand"></i></button>
-            </div>
-          </div>
-          <div class="bike-card-body">
-            <div class="bike-card-brand">Kawasaki</div>
-            <h3 class="bike-card-name">Ninja 300</h3>
-            <div class="bike-card-specs">
-              <span><i class="fas fa-tachometer-alt"></i> 39 HP</span>
-              <span><i class="fas fa-cog"></i> 296cc</span>
-              <span><i class="fas fa-gas-pump"></i> 28 km/l</span>
-            </div>
-            <div class="bike-card-footer">
-              <div class="bike-price">₹3,40,000</div>
-              <button class="btn btn-sm btn-primary" data-bike="ninja300">View Details</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Bike 5 -->
-        <div class="bike-card" data-category="cruiser" data-aos="fade-up">
-          <div class="bike-card-image">
-            <img src="https://images.unsplash.com/photo-1609630875171-b1321377ee65?w=600&q=80" alt="Honda CB350" loading="lazy" />
-            <div class="bike-card-overlay">
-              <button class="btn-icon" data-bike="cb350"><i class="fas fa-expand"></i></button>
-            </div>
-          </div>
-          <div class="bike-card-body">
-            <div class="bike-card-brand">Honda</div>
-            <h3 class="bike-card-name">H'ness CB350</h3>
-            <div class="bike-card-specs">
-              <span><i class="fas fa-tachometer-alt"></i> 21 HP</span>
-              <span><i class="fas fa-cog"></i> 348cc</span>
-              <span><i class="fas fa-gas-pump"></i> 35 km/l</span>
-            </div>
-            <div class="bike-card-footer">
-              <div class="bike-price">₹2,03,000</div>
-              <button class="btn btn-sm btn-primary" data-bike="cb350">View Details</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Bike 6 -->
-        <div class="bike-card" data-category="street" data-aos="fade-up">
-          <div class="bike-card-badge">Popular</div>
-          <div class="bike-card-image">
-            <img src="https://images.unsplash.com/photo-1622185135505-2d795003994a?w=600&q=80" alt="Bajaj Pulsar NS200" loading="lazy" />
-            <div class="bike-card-overlay">
-              <button class="btn-icon" data-bike="ns200"><i class="fas fa-expand"></i></button>
-            </div>
-          </div>
-          <div class="bike-card-body">
-            <div class="bike-card-brand">Bajaj</div>
-            <h3 class="bike-card-name">Pulsar NS200</h3>
-            <div class="bike-card-specs">
-              <span><i class="fas fa-tachometer-alt"></i> 24.5 HP</span>
-              <span><i class="fas fa-cog"></i> 199cc</span>
-              <span><i class="fas fa-gas-pump"></i> 35 km/l</span>
-            </div>
-            <div class="bike-card-footer">
-              <div class="bike-price">₹1,40,000</div>
-              <button class="btn btn-sm btn-primary" data-bike="ns200">View Details</button>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== ABOUT ========== -->
-  <section class="section about-section" id="about">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-image">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=700&q=80" alt="MotoVault Showroom" loading="lazy" />
-          <div class="about-image-badge">
-            <span class="about-badge-number">15+</span>
-            <span class="about-badge-text">Years of Excellence</span>
-          </div>
-        </div>
-        <div class="about-content">
-          <p class="section-tag">About Us</p>
-          <h2 class="section-title">Why Choose <span class="gradient-text">MotoVault?</span></h2>
-          <p class="about-text">
-            We are India's premier motorcycle showroom, bringing together the world's finest two-wheelers under one roof. With over 15 years in the business, we've helped thousands of riders find their dream machine.
-          </p>
-          <div class="about-features">
-            <div class="about-feature">
-              <div class="about-feature-icon"><i class="fas fa-shield-alt"></i></div>
-              <div>
-                <h4>Certified Bikes</h4>
-                <p>Every motorcycle undergoes a rigorous 150-point inspection</p>
-              </div>
-            </div>
-            <div class="about-feature">
-              <div class="about-feature-icon"><i class="fas fa-hand-holding-usd"></i></div>
-              <div>
-                <h4>Best Price Guarantee</h4>
-                <p>We match any authorized dealer price – no questions asked</p>
-              </div>
-            </div>
-            <div class="about-feature">
-              <div class="about-feature-icon"><i class="fas fa-tools"></i></div>
-              <div>
-                <h4>Free 3-Year Service</h4>
-                <p>Complimentary maintenance package with every purchase</p>
-              </div>
-            </div>
-            <div class="about-feature">
-              <div class="about-feature-icon"><i class="fas fa-exchange-alt"></i></div>
-              <div>
-                <h4>Easy Exchange</h4>
-                <p>Hassle-free exchange policy with instant valuation</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== CONTACT ========== -->
-  <section class="section contact-section" id="contact">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-tag">Get In Touch</p>
-        <h2 class="section-title">Book a <span class="gradient-text">Test Ride</span></h2>
-        <p class="section-subtitle">Fill in your details and we'll get back to you within 24 hours</p>
-      </div>
-      <div class="contact-grid">
-        <form class="contact-form" id="contactForm">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="name">Full Name</label>
-              <input type="text" id="name" placeholder="John Doe" required />
-            </div>
-            <div class="form-group">
-              <label for="phone">Phone</label>
-              <input type="tel" id="phone" placeholder="+91 98765 43210" required />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="john@example.com" required />
-          </div>
-          <div class="form-group">
-            <label for="bikeInterest">Bike of Interest</label>
-            <select id="bikeInterest">
-              <option value="">Select a bike</option>
-              <option value="classic350">Royal Enfield Classic 350</option>
-              <option value="duke390">KTM Duke 390</option>
-              <option value="r15v4">Yamaha YZF R15 V4</option>
-              <option value="ninja300">Kawasaki Ninja 300</option>
-              <option value="cb350">Honda H'ness CB350</option>
-              <option value="ns200">Bajaj Pulsar NS200</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" rows="4" placeholder="I'd like to schedule a test ride..."></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-full">
-            <i class="fas fa-paper-plane"></i> Send Message
-          </button>
-        </form>
-        <div class="contact-info">
-          <div class="contact-info-card">
-            <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
-            <h4>Visit Us</h4>
-            <p>42, MG Road, Bengaluru<br/>Karnataka – 560001</p>
-          </div>
-          <div class="contact-info-card">
-            <div class="contact-info-icon"><i class="fas fa-phone-alt"></i></div>
-            <h4>Call Us</h4>
-            <p>+91 98765 43210<br/>Mon – Sat, 9 AM – 8 PM</p>
-          </div>
-          <div class="contact-info-card">
-            <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
-            <h4>Email Us</h4>
-            <p>info@motovault.in<br/>sales@motovault.in</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="#" class="nav-logo">
-            <i class="fas fa-motorcycle"></i>
-            <span>Moto<span class="accent">Vault</span></span>
-          </a>
-          <p>India's premier destination for premium motorcycles. Ride your dream today.</p>
-          <div class="footer-socials">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-          </div>
-        </div>
-        <div class="footer-links">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#bikes">Bikes</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-links">
-          <h4>Brands</h4>
-          <ul>
-            <li><a href="#">Royal Enfield</a></li>
-            <li><a href="#">KTM</a></li>
-            <li><a href="#">Yamaha</a></li>
-            <li><a href="#">Kawasaki</a></li>
-            <li><a href="#">Honda</a></li>
-            <li><a href="#">Bajaj</a></li>
-          </ul>
-        </div>
-        <div class="footer-links">
-          <h4>Services</h4>
-          <ul>
-            <li><a href="#">Test Ride</a></li>
-            <li><a href="#">Financing</a></li>
-            <li><a href="#">Insurance</a></li>
-            <li><a href="#">Service Center</a></li>
-            <li><a href="#">Accessories</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 MotoVault. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- ========== BIKE DETAIL MODAL ========== -->
-  <div class="modal-backdrop" id="bikeModal">
-    <div class="modal">
-      <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
-      <div class="modal-grid">
-        <div class="modal-image">
-          <img id="modalImage" src="" alt="Bike" />
-        </div>
-        <div class="modal-content">
-          <span class="modal-brand" id="modalBrand"></span>
-          <h2 class="modal-name" id="modalName"></h2>
-          <p class="modal-desc" id="modalDesc"></p>
-          <div class="modal-specs" id="modalSpecs"></div>
-          <div class="modal-price" id="modalPrice"></div>
-          <div class="modal-actions">
-            <a href="#contact" class="btn btn-primary" id="modalCta">
-              <i class="fas fa-calendar-check"></i> Book Test Ride
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <i class="fas fa-motorcycle"></i>
+                <span>Moto<span class="accent">Vault</span></span>
             </a>
-          </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#bikes" class="nav-link">Bikes</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
         </div>
-      </div>
-    </div>
-  </div>
+    </nav>
 
-  <script src="script.js"></script>
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="home">
+        <div class="hero-particles" id="heroParticles"></div>
+        <div class="hero-content">
+            <p class="hero-tag">⚡ Premium Motorcycles</p>
+            <h1 class="hero-title">
+                Ride the <span class="gradient-text">Future</span>
+            </h1>
+            <p class="hero-subtitle">
+                Discover our handpicked collection of the finest motorcycles from legendary brands. Performance, style,
+                and engineering excellence – all under one roof.
+            </p>
+            <div class="hero-cta">
+                <a href="#bikes" class="btn btn-primary">
+                    <i class="fas fa-eye"></i> Explore Collection
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    <i class="fas fa-calendar-check"></i> Book Test Ride
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="hero-stat-number" data-target="150">0</span>+
+                    <span class="hero-stat-label">Bikes in Stock</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number" data-target="12">0</span>+
+                    <span class="hero-stat-label">Premium Brands</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number" data-target="5000">0</span>+
+                    <span class="hero-stat-label">Happy Riders</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <a href="#bikes"><i class="fas fa-chevron-down"></i></a>
+        </div>
+    </section>
+
+    <!-- ========== FEATURED BIKES ========== -->
+    <section class="section bikes-section" id="bikes">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tag">Our Collection</p>
+                <h2 class="section-title">Featured <span class="gradient-text">Bikes</span></h2>
+                <p class="section-subtitle">Explore our curated selection of the most sought-after motorcycles</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="cruiser">Cruiser</button>
+                <button class="filter-btn" data-filter="sport">Sport</button>
+                <button class="filter-btn" data-filter="street">Street</button>
+                <button class="filter-btn" data-filter="naked">Naked</button>
+            </div>
+
+            <!-- Bikes Grid -->
+            <div class="bikes-grid" id="bikesGrid">
+
+                <!-- Bike 1 -->
+                <div class="bike-card" data-category="cruiser" data-aos="fade-up">
+                    <div class="bike-card-badge">Best Seller</div>
+                    <div class="bike-card-image">
+                        <img src="https://images.unsplash.com/photo-1626439064498-e163a23acfa4?w=600&q=80"
+                            alt="Royal Enfield Classic 350" loading="lazy" />
+                        <div class="bike-card-overlay">
+                            <button class="btn-icon" data-bike="classic350"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                    <div class="bike-card-body">
+                        <div class="bike-card-brand">Royal Enfield</div>
+                        <h3 class="bike-card-name">Classic 350</h3>
+                        <div class="bike-card-specs">
+                            <span><i class="fas fa-tachometer-alt"></i> 20.2 HP</span>
+                            <span><i class="fas fa-cog"></i> 349cc</span>
+                            <span><i class="fas fa-gas-pump"></i> 35 km/l</span>
+                        </div>
+                        <div class="bike-card-footer">
+                            <div class="bike-price">₹1,99,500</div>
+                            <button class="btn btn-sm btn-primary" data-bike="classic350">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bike 2 -->
+                <div class="bike-card" data-category="naked" data-aos="fade-up">
+                    <div class="bike-card-badge hot">Hot 🔥</div>
+                    <div class="bike-card-image">
+                        <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=600&q=80"
+                            alt="KTM Duke 390" loading="lazy" />
+                        <div class="bike-card-overlay">
+                            <button class="btn-icon" data-bike="duke390"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                    <div class="bike-card-body">
+                        <div class="bike-card-brand">KTM</div>
+                        <h3 class="bike-card-name">Duke 390</h3>
+                        <div class="bike-card-specs">
+                            <span><i class="fas fa-tachometer-alt"></i> 43 HP</span>
+                            <span><i class="fas fa-cog"></i> 373cc</span>
+                            <span><i class="fas fa-gas-pump"></i> 30 km/l</span>
+                        </div>
+                        <div class="bike-card-footer">
+                            <div class="bike-price">₹3,11,000</div>
+                            <button class="btn btn-sm btn-primary" data-bike="duke390">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bike 3 -->
+                <div class="bike-card" data-category="sport" data-aos="fade-up">
+                    <div class="bike-card-badge new">New</div>
+                    <div class="bike-card-image">
+                        <img src="https://images.unsplash.com/photo-1547549082-6bc09f2049ae?w=600&q=80"
+                            alt="Yamaha YZF R15 V4" loading="lazy" />
+                        <div class="bike-card-overlay">
+                            <button class="btn-icon" data-bike="r15v4"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                    <div class="bike-card-body">
+                        <div class="bike-card-brand">Yamaha</div>
+                        <h3 class="bike-card-name">YZF R15 V4</h3>
+                        <div class="bike-card-specs">
+                            <span><i class="fas fa-tachometer-alt"></i> 18.4 HP</span>
+                            <span><i class="fas fa-cog"></i> 155cc</span>
+                            <span><i class="fas fa-gas-pump"></i> 40 km/l</span>
+                        </div>
+                        <div class="bike-card-footer">
+                            <div class="bike-price">₹1,87,000</div>
+                            <button class="btn btn-sm btn-primary" data-bike="r15v4">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bike 4 -->
+                <div class="bike-card" data-category="sport" data-aos="fade-up">
+                    <div class="bike-card-image">
+                        <img src="https://images.unsplash.com/photo-1580310614729-ccd69652491d?w=600&q=80"
+                            alt="Kawasaki Ninja 300" loading="lazy" />
+                        <div class="bike-card-overlay">
+                            <button class="btn-icon" data-bike="ninja300"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                    <div class="bike-card-body">
+                        <div class="bike-card-brand">Kawasaki</div>
+                        <h3 class="bike-card-name">Ninja 300</h3>
+                        <div class="bike-card-specs">
+                            <span><i class="fas fa-tachometer-alt"></i> 39 HP</span>
+                            <span><i class="fas fa-cog"></i> 296cc</span>
+                            <span><i class="fas fa-gas-pump"></i> 28 km/l</span>
+                        </div>
+                        <div class="bike-card-footer">
+                            <div class="bike-price">₹3,40,000</div>
+                            <button class="btn btn-sm btn-primary" data-bike="ninja300">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bike 5 -->
+                <div class="bike-card" data-category="cruiser" data-aos="fade-up">
+                    <div class="bike-card-image">
+                        <img src="https://images.unsplash.com/photo-1609630875171-b1321377ee65?w=600&q=80"
+                            alt="Honda CB350" loading="lazy" />
+                        <div class="bike-card-overlay">
+                            <button class="btn-icon" data-bike="cb350"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                    <div class="bike-card-body">
+                        <div class="bike-card-brand">Honda</div>
+                        <h3 class="bike-card-name">H'ness CB350</h3>
+                        <div class="bike-card-specs">
+                            <span><i class="fas fa-tachometer-alt"></i> 21 HP</span>
+                            <span><i class="fas fa-cog"></i> 348cc</span>
+                            <span><i class="fas fa-gas-pump"></i> 35 km/l</span>
+                        </div>
+                        <div class="bike-card-footer">
+                            <div class="bike-price">₹2,03,000</div>
+                            <button class="btn btn-sm btn-primary" data-bike="cb350">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bike 6 -->
+                <div class="bike-card" data-category="street" data-aos="fade-up">
+                    <div class="bike-card-badge">Popular</div>
+                    <div class="bike-card-image">
+                        <img src="https://images.unsplash.com/photo-1614165068253-0eb900949975?w=600&q=80"
+                            alt="Bajaj Pulsar NS200" loading="lazy" />
+                        <div class="bike-card-overlay">
+                            <button class="btn-icon" data-bike="ns200"><i class="fas fa-expand"></i></button>
+                        </div>
+                    </div>
+                    <div class="bike-card-body">
+                        <div class="bike-card-brand">Bajaj</div>
+                        <h3 class="bike-card-name">Pulsar NS200</h3>
+                        <div class="bike-card-specs">
+                            <span><i class="fas fa-tachometer-alt"></i> 24.5 HP</span>
+                            <span><i class="fas fa-cog"></i> 199cc</span>
+                            <span><i class="fas fa-gas-pump"></i> 35 km/l</span>
+                        </div>
+                        <div class="bike-card-footer">
+                            <div class="bike-price">₹1,40,000</div>
+                            <button class="btn btn-sm btn-primary" data-bike="ns200">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section class="section about-section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=700&q=80"
+                        alt="MotoVault Showroom" loading="lazy" />
+                    <div class="about-image-badge">
+                        <span class="about-badge-number">15+</span>
+                        <span class="about-badge-text">Years of Excellence</span>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <p class="section-tag">About Us</p>
+                    <h2 class="section-title">Why Choose <span class="gradient-text">MotoVault?</span></h2>
+                    <p class="about-text">
+                        We are India's premier motorcycle showroom, bringing together the world's finest two-wheelers
+                        under one roof. With over 15 years in the business, we've helped thousands of riders find their
+                        dream machine.
+                    </p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="about-feature-icon"><i class="fas fa-shield-alt"></i></div>
+                            <div>
+                                <h4>Certified Bikes</h4>
+                                <p>Every motorcycle undergoes a rigorous 150-point inspection</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                            <div>
+                                <h4>Best Price Guarantee</h4>
+                                <p>We match any authorized dealer price – no questions asked</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon"><i class="fas fa-tools"></i></div>
+                            <div>
+                                <h4>Free 3-Year Service</h4>
+                                <p>Complimentary maintenance package with every purchase</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon"><i class="fas fa-exchange-alt"></i></div>
+                            <div>
+                                <h4>Easy Exchange</h4>
+                                <p>Hassle-free exchange policy with instant valuation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tag">Get In Touch</p>
+                <h2 class="section-title">Book a <span class="gradient-text">Test Ride</span></h2>
+                <p class="section-subtitle">Fill in your details and we'll get back to you within 24 hours</p>
+            </div>
+            <div class="contact-grid">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" placeholder="John Doe" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" placeholder="+91 98765 43210" required />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="john@example.com" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="bikeInterest">Bike of Interest</label>
+                        <select id="bikeInterest">
+                            <option value="">Select a bike</option>
+                            <option value="classic350">Royal Enfield Classic 350</option>
+                            <option value="duke390">KTM Duke 390</option>
+                            <option value="r15v4">Yamaha YZF R15 V4</option>
+                            <option value="ninja300">Kawasaki Ninja 300</option>
+                            <option value="cb350">Honda H'ness CB350</option>
+                            <option value="ns200">Bajaj Pulsar NS200</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="4" placeholder="I'd like to schedule a test ride..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+                <div class="contact-info">
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <h4>Visit Us</h4>
+                        <p>42, MG Road, Bengaluru<br />Karnataka – 560001</p>
+                    </div>
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon"><i class="fas fa-phone-alt"></i></div>
+                        <h4>Call Us</h4>
+                        <p>+91 98765 43210<br />Mon – Sat, 9 AM – 8 PM</p>
+                    </div>
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+                        <h4>Email Us</h4>
+                        <p>info@motovault.in<br />sales@motovault.in</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="nav-logo">
+                        <i class="fas fa-motorcycle"></i>
+                        <span>Moto<span class="accent">Vault</span></span>
+                    </a>
+                    <p>India's premier destination for premium motorcycles. Ride your dream today.</p>
+                    <div class="footer-socials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#bikes">Bikes</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Brands</h4>
+                    <ul>
+                        <li><a href="#">Royal Enfield</a></li>
+                        <li><a href="#">KTM</a></li>
+                        <li><a href="#">Yamaha</a></li>
+                        <li><a href="#">Kawasaki</a></li>
+                        <li><a href="#">Honda</a></li>
+                        <li><a href="#">Bajaj</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Test Ride</a></li>
+                        <li><a href="#">Financing</a></li>
+                        <li><a href="#">Insurance</a></li>
+                        <li><a href="#">Service Center</a></li>
+                        <li><a href="#">Accessories</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MotoVault. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== BIKE DETAIL MODAL ========== -->
+    <div class="modal-backdrop" id="bikeModal">
+        <div class="modal">
+            <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+            <div class="modal-grid">
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="Bike" />
+                </div>
+                <div class="modal-content">
+                    <span class="modal-brand" id="modalBrand"></span>
+                    <h2 class="modal-name" id="modalName"></h2>
+                    <p class="modal-desc" id="modalDesc"></p>
+                    <div class="modal-specs" id="modalSpecs"></div>
+                    <div class="modal-price" id="modalPrice"></div>
+                    <div class="modal-actions">
+                        <a href="#contact" class="btn btn-primary" id="modalCta">
+                            <i class="fas fa-calendar-check"></i> Book Test Ride
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
