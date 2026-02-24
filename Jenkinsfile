@@ -19,12 +19,16 @@ pipeline {
             steps {
                 echo '🚀 Ensuring Minikube is running...'
                 sh '''
+<<<<<<< HEAD
                     if minikube status | grep -q "Running"; then
                         echo "✅ Minikube is already running"
                     else
                         echo "Starting Minikube..."
                         minikube start --driver=docker
                     fi
+=======
+                    minikube status || minikube start --driver=none
+>>>>>>> b98c8220055882fc5a5e35c45d5f01dda57d0543
                     minikube status
                 '''
             }
