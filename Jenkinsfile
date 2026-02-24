@@ -40,8 +40,9 @@ pipeline {
                 echo '🐳 Building Docker image...'
                 sh """
                     sudo docker build -t ${IMAGE_NAME}:${IMAGE_TAG} .
-                    echo '✅ Image built successfully'
-                    sudo docker images | grep ${IMAGE_NAME}
+                    echo '✅ Docker image built'
+                    sudo docker save ${IMAGE_NAME}:${IMAGE_TAG} | sudo ctr -n=k8s.io images import -
+                    echo '✅ Image loaded into containerd for Kubernetes'
                 """
             }
         }
@@ -56,6 +57,8 @@ pipeline {
                     sudo kubectl apply -f k8s/deployment.yaml
                     sudo kubectl apply -f k8s/service.yaml
                     echo "Waiting for pods to be ready..."
+                    sleep 10
+                    sudo kubectl get pods -l app=bike-showroom
                     sudo kubectl rollout status deployment/bike-showroom --timeout=180s
                 '''
             }
@@ -85,7 +88,17 @@ pipeline {
             echo '🎉 Bike Showroom deployed successfully on Minikube!'
         }
         failure {
-            echo '❌ Pipeline failed. Check the logs above.'
+            echo '❌ Pipeline failed. Showing pod diagnostics...'
+            sh '''
+                echo "========== Pod Status =========="
+                sudo kubectl get pods -l app=bike-showroom -o wide 2>/dev/null || true
+                echo ""
+                echo "========== Pod Details =========="
+                sudo kubectl describe pods -l app=bike-showroom 2>/dev/null || true
+                echo ""
+                echo "========== Pod Logs =========="
+                sudo kubectl logs -l app=bike-showroom --tail=20 2>/dev/null || true
+            '''
         }
     }
 }

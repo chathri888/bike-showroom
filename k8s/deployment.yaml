@@ -16,8 +16,8 @@ spec:
     spec:
       containers:
         - name: bike-showroom
-          image: bike-showroom:latest
-          imagePullPolicy: Never
+          image: docker.io/library/bike-showroom:latest
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3000
           resources:
