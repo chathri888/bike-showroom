@@ -7,7 +7,7 @@ const bikeData = {
     classic350: {
         brand: 'Royal Enfield',
         name: 'Classic 350',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Royal_Enfield_Classic_350.jpg/800px-Royal_Enfield_Classic_350.jpg',
+        image: 'https://tse2.mm.bing.net/th/id/OIP.x3KB1XyEJKxMbq5TZ80niAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3',
         description: 'The Royal Enfield Classic 350 is a timeless cruiser that combines retro styling with modern engineering. Its thumping 349cc single-cylinder engine delivers smooth power while the classic chrome-laden design turns heads everywhere. Perfect for long highway cruises and city commutes alike.',
         specs: [
             { label: 'Engine', value: '349cc' },
