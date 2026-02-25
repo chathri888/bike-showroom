@@ -22,7 +22,7 @@ const bikeData = {
     duke390: {
         brand: 'KTM',
         name: 'Duke 390',
-        image: 'https://th.bing.com/th/id/OIP.wNwZ9zhu83OEbf0pHz87aQHaDF?w=344&h=145&c=7&r=0&o=7&pid=1.7&rm=3',
+        image: 'https://images.carandbike.com/cms/blog-feed/2023/9/36/blog-feed/2023/9/36/articles/2023/9/3209288/KTM_Duke_390_2023_25_aeb206c606.jpg',
         description: 'The KTM Duke 390 is a naked streetfighter built for adrenaline junkies. Powered by a 373cc liquid-cooled single-cylinder engine, it pumps out 43 HP – making it one of the most powerful bikes in its class. Razor-sharp handling and aggressive styling make it a track-day favourite.',
         specs: [
             { label: 'Engine', value: '373cc' },
@@ -67,7 +67,7 @@ const bikeData = {
     cb350: {
         brand: 'Honda',
         name: "H'ness CB350",
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Honda_CB350_RS.jpg/800px-Honda_CB350_RS.jpg',
+        image: 'https://tse2.mm.bing.net/th/id/OIP.23WTPtz057OzKh923SX1BQHaE8?rs=1&pid=ImgDetMain&o=7&rm=3',
         description: "Honda's H'ness CB350 is a modern classic that exudes elegance. Its 348cc single-cylinder engine is paired with Honda Selectable Torque Control (HSTC) and dual-channel ABS. Bluetooth-enabled instrument cluster and subtle LED elements make it effortlessly premium.",
         specs: [
             { label: 'Engine', value: '348cc' },
@@ -82,7 +82,7 @@ const bikeData = {
     ns200: {
         brand: 'Bajaj',
         name: 'Pulsar NS200',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Bajaj_Pulsar_200_NS.jpg/800px-Bajaj_Pulsar_200_NS.jpg',
+        image: 'https://wallpapercave.com/wp/wp4149864.jpg',
         description: 'The Bajaj Pulsar NS200 is a street-naked rocket that punches way above its price. A 199.5cc liquid-cooled engine with triple-spark technology delivers punchy performance. Perimeter frame, mono-shock rear, and aggressive styling make every ride thrilling.',
         specs: [
             { label: 'Engine', value: '199cc' },
