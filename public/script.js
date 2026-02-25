@@ -7,7 +7,7 @@ const bikeData = {
     classic350: {
         brand: 'Royal Enfield',
         name: 'Classic 350',
-        image: 'https://images.unsplash.com/photo-1635073943212-f81e38de8d9c?w=800&q=80',
+        image: 'https://images.pexels.com/photos/2519374/pexels-photo-2519374.jpeg?auto=compress&cs=tinysrgb&w=800',
         description: 'The Royal Enfield Classic 350 is a timeless cruiser that combines retro styling with modern engineering. Its thumping 349cc single-cylinder engine delivers smooth power while the classic chrome-laden design turns heads everywhere. Perfect for long highway cruises and city commutes alike.',
         specs: [
             { label: 'Engine', value: '349cc' },
@@ -22,7 +22,7 @@ const bikeData = {
     duke390: {
         brand: 'KTM',
         name: 'Duke 390',
-        image: 'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=800&q=80',
+        image: 'https://images.pexels.com/photos/2549941/pexels-photo-2549941.jpeg?auto=compress&cs=tinysrgb&w=800',
         description: 'The KTM Duke 390 is a naked streetfighter built for adrenaline junkies. Powered by a 373cc liquid-cooled single-cylinder engine, it pumps out 43 HP – making it one of the most powerful bikes in its class. Razor-sharp handling and aggressive styling make it a track-day favourite.',
         specs: [
             { label: 'Engine', value: '373cc' },
@@ -37,7 +37,7 @@ const bikeData = {
     r15v4: {
         brand: 'Yamaha',
         name: 'YZF R15 V4',
-        image: 'https://images.unsplash.com/photo-1547549082-6bc09f2049ae?w=800&q=80',
+        image: 'https://images.pexels.com/photos/1119796/pexels-photo-1119796.jpeg?auto=compress&cs=tinysrgb&w=800',
         description: 'The Yamaha R15 V4 carries MotoGP DNA in a 155cc package. Variable Valve Actuation (VVA), quickshifter assist, and traction control make this the most tech-loaded bike in its segment. Its delta-box frame and aggressive fairing scream pure sport.',
         specs: [
             { label: 'Engine', value: '155cc' },
@@ -52,7 +52,7 @@ const bikeData = {
     ninja300: {
         brand: 'Kawasaki',
         name: 'Ninja 300',
-        image: 'https://images.unsplash.com/photo-1580310614729-ccd69652491d?w=800&q=80',
+        image: 'https://images.pexels.com/photos/1413412/pexels-photo-1413412.jpeg?auto=compress&cs=tinysrgb&w=800',
         description: 'The Kawasaki Ninja 300 is the entry pass to the legendary Ninja lineup. Its parallel-twin 296cc engine is silky smooth and delivers effortless performance. Aerodynamic bodywork, slipper clutch, and ABS make it a perfect all-rounder for sport enthusiasts.',
         specs: [
             { label: 'Engine', value: '296cc' },
@@ -67,7 +67,7 @@ const bikeData = {
     cb350: {
         brand: 'Honda',
         name: "H'ness CB350",
-        image: 'https://images.unsplash.com/photo-1609630875171-b1321377ee65?w=800&q=80',
+        image: 'https://images.pexels.com/photos/2611686/pexels-photo-2611686.jpeg?auto=compress&cs=tinysrgb&w=800',
         description: "Honda's H'ness CB350 is a modern classic that exudes elegance. Its 348cc single-cylinder engine is paired with Honda Selectable Torque Control (HSTC) and dual-channel ABS. Bluetooth-enabled instrument cluster and subtle LED elements make it effortlessly premium.",
         specs: [
             { label: 'Engine', value: '348cc' },
@@ -82,7 +82,7 @@ const bikeData = {
     ns200: {
         brand: 'Bajaj',
         name: 'Pulsar NS200',
-        image: 'https://images.unsplash.com/photo-1611241893603-3c228ee0ae6f?w=800&q=80',
+        image: 'https://images.pexels.com/photos/1413413/pexels-photo-1413413.jpeg?auto=compress&cs=tinysrgb&w=800',
         description: 'The Bajaj Pulsar NS200 is a street-naked rocket that punches way above its price. A 199.5cc liquid-cooled engine with triple-spark technology delivers punchy performance. Perimeter frame, mono-shock rear, and aggressive styling make every ride thrilling.',
         specs: [
             { label: 'Engine', value: '199cc' },
