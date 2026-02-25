@@ -103,6 +103,23 @@
                 <p class="section-subtitle">Explore our curated selection of the most sought-after motorcycles</p>
             </div>
 
+            <!-- Search Bar -->
+            <div class="search-bar" id="searchBar">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="bikeSearch" placeholder="Search bikes by name, brand, or category..."
+                    autocomplete="off" />
+                <button class="search-clear" id="searchClear" aria-label="Clear search">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <!-- No Results Message -->
+            <div class="no-results" id="noResults" style="display: none;">
+                <i class="fas fa-motorcycle"></i>
+                <h3>No bikes found</h3>
+                <p>Try a different search term or clear the filter</p>
+            </div>
+
             <!-- Filter Buttons -->
             <div class="filter-bar">
                 <button class="filter-btn active" data-filter="all">All</button>

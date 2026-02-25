@@ -143,9 +143,74 @@ navLinkEls.forEach(link => {
     });
 });
 
+// ---- Bike Search ----
+const bikeSearchInput = document.getElementById('bikeSearch');
+const searchClearBtn = document.getElementById('searchClear');
+const noResults = document.getElementById('noResults');
+const bikesGrid = document.getElementById('bikesGrid');
+
+function performSearch(query) {
+    const searchTerm = query.toLowerCase().trim();
+
+    // Show/hide clear button
+    searchClearBtn.classList.toggle('visible', searchTerm.length > 0);
+
+    let visibleCount = 0;
+
+    bikeCards.forEach(card => {
+        const name = card.querySelector('.bike-card-name')?.textContent.toLowerCase() || '';
+        const brand = card.querySelector('.bike-card-brand')?.textContent.toLowerCase() || '';
+        const category = (card.dataset.category || '').toLowerCase();
+        const specs = card.querySelector('.bike-card-specs')?.textContent.toLowerCase() || '';
+        const price = card.querySelector('.bike-price')?.textContent.toLowerCase() || '';
+
+        const matches = searchTerm === '' ||
+            name.includes(searchTerm) ||
+            brand.includes(searchTerm) ||
+            category.includes(searchTerm) ||
+            specs.includes(searchTerm) ||
+            price.includes(searchTerm);
+
+        if (matches) {
+            card.classList.remove('search-hidden');
+            visibleCount++;
+        } else {
+            card.classList.add('search-hidden');
+        }
+    });
+
+    // Show/hide no results message
+    noResults.style.display = visibleCount === 0 && searchTerm.length > 0 ? 'block' : 'none';
+    bikesGrid.style.display = visibleCount === 0 && searchTerm.length > 0 ? 'none' : '';
+
+    // Reset category filter to "All" when searching
+    if (searchTerm.length > 0) {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        filterBtns[0]?.classList.add('active');
+        bikeCards.forEach(card => card.classList.remove('hidden'));
+    }
+}
+
+bikeSearchInput.addEventListener('input', (e) => {
+    performSearch(e.target.value);
+});
+
+searchClearBtn.addEventListener('click', () => {
+    bikeSearchInput.value = '';
+    performSearch('');
+    bikeSearchInput.focus();
+});
+
 // ---- Category Filter ----
 filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
+        // Clear search when switching category
+        bikeSearchInput.value = '';
+        searchClearBtn.classList.remove('visible');
+        bikeCards.forEach(card => card.classList.remove('search-hidden'));
+        noResults.style.display = 'none';
+        bikesGrid.style.display = '';
+
         filterBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
 
